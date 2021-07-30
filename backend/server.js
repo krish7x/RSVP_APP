@@ -6,6 +6,7 @@ const express = require("express");
 const mongo = require("./config/mongo");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const route = require("../../backend/routes/details");
 
 dotenv.config();
 const app = express();
