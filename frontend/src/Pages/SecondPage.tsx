@@ -8,6 +8,8 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import SearchBar from "material-ui-search-bar";
+import { API_PROD } from "../api";
+let fetch = require("node-fetch");
 
 const useStyles = makeStyles({
   table: {
@@ -21,7 +23,6 @@ const useStyles = makeStyles({
     fontSize: "16px",
   },
 });
-let fetch = require("node-fetch");
 
 interface IDetails {
   name: string;
@@ -39,7 +40,7 @@ const FirstPage = () => {
   const [searched, setSearched] = useState<string>("");
 
   const fetchData = () => {
-    fetch("http://localhost:8000/api/show", {
+    fetch(`${API_PROD}/show`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
