@@ -4,6 +4,7 @@ import Sidebar from "./Components/Sidebar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import FirstPage from "./Pages/FirstPage";
 import SecondPage from "./Pages/SecondPage";
+import ThirdPage from "./Pages/ThirdPage";
 function App() {
   return (
     <Router>
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route exact path="/second">
             <SecondPage />
+          </Route>
+          <Route exact path="/third">
+            <ThirdPage />
           </Route>
         </div>
       </div>
