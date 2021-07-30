@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navitem from "./SibarItem";
+import Navitem from "./SidebarItem";
 
 export default class Navbar extends Component {
   state = {
