@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Chart } from "react-google-charts";
-import { API_PROD } from "../api";
+import { API_LOCAL } from "../api";
 
 interface IDetails {
   name: string;
@@ -37,7 +37,7 @@ const FirstPage = () => {
     twoPplAvg = 0;
 
   const fetchData = () => {
-    fetch(`${API_PROD}/show`, {
+    fetch(`${API_LOCAL}/show`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })

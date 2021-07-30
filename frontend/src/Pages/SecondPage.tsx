@@ -8,7 +8,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import SearchBar from "material-ui-search-bar";
-import { API_PROD } from "../api";
+import { API_LOCAL } from "../api";
 let fetch = require("node-fetch");
 
 const useStyles = makeStyles({
@@ -40,7 +40,7 @@ const FirstPage = () => {
   const [searched, setSearched] = useState<string>("");
 
   const fetchData = () => {
-    fetch(`${API_PROD}/show`, {
+    fetch(`${API_LOCAL}/show`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
