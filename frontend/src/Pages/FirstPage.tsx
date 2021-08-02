@@ -15,7 +15,7 @@ import {
 } from "@material-ui/pickers";
 import { Alert, AlertTitle } from "@material-ui/lab";
 import DateFnsUtils from "@date-io/date-fns";
-import { API_LOCAL } from "../api";
+import { API } from "../api";
 let fetch = require("node-fetch");
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -83,7 +83,7 @@ const FirstPage: React.FC<{}> = () => {
       address: address,
     };
 
-    fetch(`${API_LOCAL}/save`, {
+    fetch(`${API}/save`, {
       method: "POST",
       body: JSON.stringify(result),
       headers: { "Content-Type": "application/json" },
